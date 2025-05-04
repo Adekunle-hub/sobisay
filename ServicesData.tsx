@@ -8,7 +8,7 @@ type Service = {
 }
 
 
- const servicesDate: Service[] = [
+ const servicesData: Service[] = [
   {
     image: "/hamburger.png",
     content:"Website Development",
@@ -27,5 +27,5 @@ type Service = {
 
 ]
 
-export default servicesDate;
+export default servicesData;
 
