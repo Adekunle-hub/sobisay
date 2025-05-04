@@ -1,6 +1,6 @@
 
 import customersFeedback from "../../CustomersFeedback"
-import Marquee from "react-fast-marquee";
+
 
 const Feedback = () => {
   console.log(customersFeedback)
@@ -9,12 +9,7 @@ const Feedback = () => {
       <section className='md:py-[3rem] pt-[1rem] w-full bg-[#F1F1F1]'>
         <div className='w-[90%] mx-auto'>
           <h1 className='text-4xl text-center py-[1rem]'>Customer's <span className='text-blue-800'> Feedback </span></h1>
-          <Marquee
-            speed={50}
-            pauseOnHover
-            pauseOnClick
-            gradient={false}
-           className='grid grid-cols-1 md:grid-cols-3 md:py-[3rem] gap-[1.2rem] '>
+          <article className='grid grid-cols-1 md:grid-cols-3 md:py-[3rem] gap-[1.2rem] '>
             {customersFeedback.map((customersFeedback, index)=>(
               <section key={index} className='flex flex-col justify-between items-cne gap-[3rem] rounded-3xl bg-white py-6 px-4'>
                 <p className='md:text-lg pt-[10px] text-base'> 
@@ -31,7 +26,7 @@ const Feedback = () => {
             ))}
 
               
-          </Marquee>
+          </article>
         </div>
 
       </section>
