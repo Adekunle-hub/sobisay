@@ -37,7 +37,7 @@ const Header = () => {
  }
 
   return (
-    <nav className="pt-[1.5rem] z-20 fixed top-0 left-0 w-full bg-[#F1F1F1] pb-[1.5rem]">
+    <nav className="pt-[1.5rem] z-20 md:static fixed top-0 left-0 w-full bg-[#F1F1F1] pb-[1.5rem]">
       <section className='md:flex w-[90%] mx-auto relative items-center justify-between '>
         <div >
           <img src={sobisayImage} className='scale-[0.7] h-auto' />

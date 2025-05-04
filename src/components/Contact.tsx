@@ -98,7 +98,7 @@ const Contact = () => {
               onChange={handleChange}
               className='bg-white rounded-lg px-3 max-w-[100%] md:w-[32rem] py-4' 
             />
-            <p className='m-0 p-0'>{formErrors.fullname} </p>
+            <p className='text-white text-sm'>{formErrors.fullname} </p>
           </div>
           
            
@@ -112,7 +112,7 @@ const Contact = () => {
               onChange={handleChange}
               value={formValue.email}
               className='bg-white rounded-lg px-3 max-w-[100%] md:w-[32rem] py-4' />
-              <p>{formErrors.email} </p>
+              <p className='text-white text-sm'>{formErrors.email} </p>
             </div>
             
             
@@ -126,7 +126,7 @@ const Contact = () => {
                 onChange={handleChange}
                 value={formValue.phone}
                 className='bg-white rounded-lg px-3 max-w-[100%] md:w-[32rem] py-4'  />
-                <p>{formErrors.phone} </p>
+                <p className='text-white text-sm'>{formErrors.phone} </p>
             </div>
             
            
