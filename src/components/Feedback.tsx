@@ -1,4 +1,4 @@
-import React from 'react'
+
 import customersFeedback from "../../CustomersFeedback"
 import Marquee from "react-fast-marquee";
 

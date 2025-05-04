@@ -1,4 +1,4 @@
-import React from 'react'
+
 import sobisayImage from "/image.webp"
 import copyRight from "/copy_right.png"
 import line from "/line_3.png"

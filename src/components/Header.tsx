@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import sobisayImage from "/image.webp"
 import Buttons from './Button'
 import HamBurger from "/hamburger.png"
-import { motion, AnimatePresence } from 'framer-motion'
+
 
 
 const Header = () => {
