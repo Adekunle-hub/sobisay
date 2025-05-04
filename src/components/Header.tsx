@@ -43,9 +43,9 @@ const Header = () => {
           <img src={sobisayImage} className='scale-[0.7] h-auto' />
         </div>
     
-        <div className={`md:flex pl-[2rem] md:static items-center justify-center w-screen pt-[5rem] md:pt-[0] md:w-auto  fixed right-0 z-4 transition-all duration-200 ease-in 
+        <div className={`md:flex pl-[2rem] text-[rgb(61,61,61)] text-opacity-80 md:static items-center justify-center w-screen pt-[5rem] md:pt-[0] md:w-auto  fixed right-0 z-4 transition-all duration-200 ease-in 
         ${isMobile 
-          ? (menuOpen ? 'top-0 bg-white text-[rgb(61,61,61)] text-opacity-80' : 'top-[-400px]' )
+          ? (menuOpen ? 'top-0 bg-white ' : 'top-[-400px]' )
           :""
         }`}>
           <Buttons contents={navBarContents} />
