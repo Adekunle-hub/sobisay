@@ -1,21 +1,10 @@
 
 import React from 'react'
-import {motion, useMotionValue, MotionValue} from "framer-motion"
-import { useState } from 'react'
+import {motion, useMotionValue} from "framer-motion"
 
-interface whileHoverProps{
-  whileHover?:{
-  x:number[]
-  y:number[]
-  transiton?:{
-    duration?:number
-  }
-}};
 
-// interface MotionValue {
-//   x: ReturnType<typeof useMotionValue>
-//   y: ReturnType<typeof useMotionValue>
-// }
+
+
 
 interface NavigationPropsLink{
   contents:string[];

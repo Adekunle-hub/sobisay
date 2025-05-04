@@ -1,5 +1,5 @@
-import React from 'react'
-import servicesData from "../../servicesData"
+
+import servicesData from "../../servicesData.tsx"
 
 const Services = () => {
   return (
@@ -12,7 +12,7 @@ const Services = () => {
       </section>
         <section className='flex flex-col md:flex-row py-[2rem] gap-[1rem]'>
 
-          {servicesData.map((data, index)=>{
+          {servicesData.map((data, index:number)=>{
             return (
             <div key={index} className='border-1 border-[#E0E0E0] flex rounded-2xl px-[2rem] pb-[2rem] gap-[5rem] justify-between flex-col'>
               <img src={data.image} className='w-[50px] pt-[2rem]' />      

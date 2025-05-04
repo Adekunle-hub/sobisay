@@ -1,4 +1,4 @@
-import React from 'react'
+
 import galleryImage1 from "/gallery_img_1.png"
 import galleryImage2 from "/gallery_img-2.png"
 
