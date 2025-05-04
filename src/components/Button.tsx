@@ -52,7 +52,8 @@ const buttonMotionValues  = contents.map(()=>
         {contents.map((content, index) =>{
           return ( 
            <ul
-          className='cursor-pointer pb-[0.5rem] md:pb-[0] font-semibold mb-[1rem] w-full  md:border-none border-b-1  '
+          className='cursor-pointer pb-[0.5rem] md:pb-[0] font-semibold mb-[1rem] w-full  md:border-none border-b-1
+          border-[rgba(61,61,61,0.3)]  '
            >
            <motion.li key={index}
              style={{

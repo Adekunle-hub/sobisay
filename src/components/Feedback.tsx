@@ -6,7 +6,7 @@ const Feedback = () => {
   console.log(customersFeedback)
   return (
     <>
-      <section className='md:py-[3rem] pt-[1rem] w-full bg-[#F1F1F1]'>
+      <section className='md:py-[3rem] py-[2rem] w-full bg-[#F1F1F1]'>
         <div className='w-[90%] mx-auto'>
           <h1 className='text-4xl text-center py-[1rem]'>Customer's <span className='text-blue-800'> Feedback </span></h1>
           <article className='grid grid-cols-1 md:grid-cols-3 md:py-[3rem] gap-[1.2rem] '>

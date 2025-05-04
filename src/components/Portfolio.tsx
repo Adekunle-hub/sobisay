@@ -29,7 +29,7 @@ const Portfolio = () => {
           > Video Creatives</button>
         </div>
     </section>
-    <section className='grid grid-cols-1 md:pb-[4rem] pb-[1rem] md:grid-cols-3 gap-[1rem]  w-[90%] mx-auto'>
+    <section className='grid grid-cols-1 md:pb-[4rem] pb-[3rem] md:grid-cols-3 gap-[1rem]  w-[90%] mx-auto'>
       {toggleDisplay ==='option1' && webDevelopment?.map((data,index)=>(
            <div key={index} className='border-1 border-[#ECECEC] p-5 py-[1rem] rounded-2xl '>
             <div className='relative'>
