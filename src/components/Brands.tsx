@@ -2,7 +2,7 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import BrandImages from "../../BrandsData"
-import "/Slider.css"
+import "../../slider.css"
 
 const Brands = () => {
  
