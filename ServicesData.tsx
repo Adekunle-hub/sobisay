@@ -8,7 +8,7 @@ type Service = {
 }
 
 
- const servicesData: Service[] = [
+ const servicesData :Service[] = [
   {
     image: "/hamburger.png",
     content:"Website Development",

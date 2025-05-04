@@ -1,5 +1,4 @@
-
-import servicesData from "../../servicesData.tsx"
+import servicesData from "../../ServicesData"
 
 const Services = () => {
   return (
