@@ -80,7 +80,7 @@ const Contact = () => {
 
 
   return (
-    <fieldset className='md:pt-[7rem] max-w-[90%] mx-auto pt-[3rem]'>
+    <fieldset className='md:pt-[7rem] w-[90%] mx-auto pt-[3rem]'>
       <section className=' flex rounded-3xl p-[3rem] flex-col md:flex-row mx-auto md:gap-[2rem] bg-[#024866]'>
         <div className=' md:pr-[4rem]'>
           <p className='md:text-xl text-base pb-[10px] md:pb-[1rem] text-white'>Have a project in mind?</p>

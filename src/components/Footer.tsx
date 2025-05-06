@@ -6,9 +6,9 @@ import { FaWhatsapp, FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'reac
 
 const Footer = () => {
   return (
-    <section className='pt-[7rem] '>
+    <section className='pt-[7rem] w-90% mx-auto '>
       <div className='bg-[#F1F1F1] py-[4rem]'>
-        <footer className='w-[90%] mx-auto pb-[3rem] flex flex-col md:flex-row justify-between'>
+        <footer className='pb-[3rem] flex flex-col md:flex-row justify-between'>
             <div className='fex flex-col w-full md:w-[22rem] ' >
               <img src={sobisayImage} />
               <p className='text-sm py-[1rem]'> Sobisay Studio is a global platform dedicated to providing the best solutions for our customers in managing their operations.</p>
