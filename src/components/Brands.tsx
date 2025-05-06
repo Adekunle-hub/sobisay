@@ -8,7 +8,7 @@ const Brands = () => {
  
 
   return (
-    <>
+    
       <section className=' py-[1rem]'>
         <div className='flex bg-blue-800 py-[3rem] items-center justify-center flex-col gap-[2rem]'>
           <h1 className=' text-3xl text-white font-semibold'>Brands We've Impacted</h1>
@@ -29,7 +29,7 @@ const Brands = () => {
         </div>
        
       </section>
-    </>
+    
   )
 }
 

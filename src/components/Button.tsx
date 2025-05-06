@@ -4,13 +4,20 @@ import {motion, useMotionValue} from "framer-motion"
 
 
 
+type HeaderProps = {
+  onNavClick:(section:string) => void
+}
 
 
-interface NavigationPropsLink{
+type NavigationPropsLink ={
   contents:string[];
 }
 
-const Buttons:React.FC<NavigationPropsLink> = ({contents}) => {
+type ButtonProps = HeaderProps & NavigationPropsLink;
+
+const Buttons:React.FC<ButtonProps> = ({contents, onNavClick}) => {
+  
+
 
 
 const buttonMotionValues  = contents.map(()=>
@@ -26,25 +33,37 @@ const buttonMotionValues  = contents.map(()=>
   let sensitivity:number = 0.4
   let maxMovement:number = 40
 
-  const handleMouseMove = (e:React.MouseEvent<HTMLLIElement>, index:number)=>{
-    const buttonDimension = e.currentTarget.getBoundingClientRect()
+  const handleMove = (clientX: number, clientY: number, index: number, element: HTMLElement) =>{
+    const buttonDimension = element.getBoundingClientRect()
     let centerX = (buttonDimension.left + buttonDimension.right) / 2;
     let centerY = (buttonDimension.top + buttonDimension.bottom) / 2;
 
-    const mouseX = (e.clientX - centerX ) * sensitivity;
-    const mouseY = (e.clientY - centerY ) * sensitivity;
+    const moveX = (clientX - centerX ) * sensitivity;
+    const moveY = (clientY - centerY ) * sensitivity;
 
-    buttonMotionValues[index].x.set(Math.max(-maxMovement, Math.min(maxMovement,mouseX)));
-    buttonMotionValues[index].y.set(Math.max(-maxMovement, Math.min(maxMovement,mouseY)));
+    buttonMotionValues[index].x.set(Math.max(-maxMovement, Math.min(maxMovement,moveX)));
+    buttonMotionValues[index].y.set(Math.max(-maxMovement, Math.min(maxMovement,moveY)));
 
+  }
+
+  const handleMouseMove = (e:React.MouseEvent<HTMLLIElement>, index:number)=>{
+    handleMove(e.clientX, e.clientY, index, e.currentTarget)
   };
 
   const handleMouseLeave =(index:number)=>{
     buttonMotionValues[index].x.set(0)
     buttonMotionValues[index].y.set(0)
   }
- 
+ const handleTouchMove = (e:React.TouchEvent<HTMLLIElement>, index:number) => {
+  const touch = e.touches[0]
+  handleMove(touch.clientX, touch.clientY, index, e.currentTarget)
+ }
 
+ const handleTouchEnd = (index:number)=>{
+  buttonMotionValues[index].x.set(0)
+  buttonMotionValues[index].y.set(0)
+  
+ }
   return (
     <motion.button
     
@@ -60,8 +79,12 @@ const buttonMotionValues  = contents.map(()=>
               x : buttonMotionValues[index].x,
               y : buttonMotionValues[index].y
              }}
+             onTouchMove={(e)=>{handleTouchMove(e, index)}}
+             onTouchEnd={()=>{handleTouchEnd(index)}}
              onMouseMove ={(e)=> handleMouseMove(e, index)}
              onMouseLeave ={()=>handleMouseLeave(index)}
+             onClick={()=>{onNavClick(content)}} 
+             className={content === "Home" ? "md:hidden block": ""}
              >
             {content}
             </motion.li>

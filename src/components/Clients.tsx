@@ -2,10 +2,10 @@
 import customersFeedback from "../../CustomersFeedback"
 
 
-const Feedback = () => {
-  console.log(customersFeedback)
+const Clients = () => {
+  
   return (
-    <>
+    
       <section className='md:py-[3rem] py-[2rem] w-full bg-[#F1F1F1]'>
         <div className='w-[90%] mx-auto'>
           <h1 className='md:text-4xl text-2xl text-center pb-[2rem] pt-[1rem]'>Customer's <span className='text-blue-800'> Feedback </span></h1>
@@ -30,8 +30,8 @@ const Feedback = () => {
         </div>
 
       </section>
-    </>
+    
   )
 }
 
-export default Feedback
+export default Clients;

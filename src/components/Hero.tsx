@@ -28,35 +28,3 @@ const Hero = () => {
 
 export default Hero
 
-// import React from 'react'
-// import heroImg from "/hero_img.png"
-
-// const Hero = () => {
-//   return (
-//     <>
-//     <section className='flex flex-col md:flex-row mx-auto gap-4 md:gap-8 w-11/12 md:w-10/12 justify-between items-center py-8'>
-//       <div className='w-full md:w-1/2 flex flex-col gap-4'>
-//         <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold leading-tight'>
-//           Grow Double, Tripple or even <span className='text-blue-500'>10<span className='text-2xl md:text-3xl lg:text-4xl'>X</span> Your Business</span> Online and Presence Fast
-//         </h1>
-//         <p className='text-base md:text-lg'>
-//           We create videos that engage your audience and drive traffic, as well as websites that convert those visitors into paying customers.
-//         </p>
-//         <div className='flex flex-wrap gap-4 mt-2'>
-//           <button className='bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md'> 
-//             Take Charge
-//           </button>
-//           <button className='bg-white border border-blue-500 text-blue-500 hover:bg-blue-50 font-semibold py-2 px-6 rounded-md'> 
-//             View Portfolio
-//           </button>
-//         </div>
-//       </div>
-//       <div className='w-full md:w-1/2 mt-8 md:mt-0'>
-//         <img src={heroImg} className='w-full h-auto object-contain max-h-96 md:max-h-full' alt="Hero image" />
-//       </div>
-//     </section>
-//     </>
-//   )
-// }
-
-// export default Hero
