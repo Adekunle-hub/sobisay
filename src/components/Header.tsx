@@ -1,4 +1,4 @@
-import  { useEffect, useRef, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import sobisayImage from "/image.webp"
 import Buttons from './Button'
 import HamBurger from "/hamburger.png"
