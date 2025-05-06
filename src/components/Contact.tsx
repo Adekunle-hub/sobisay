@@ -148,7 +148,7 @@ const Contact = () => {
            
             
             <button 
-            disabled={!isFormValid}
+            disabled={!enableButton}
              className= {`flex items-center self-center rounded-[4rem] bg-blue-800
               ${isFormValid 
                 ? " opacity-100 cursor-pointer"
