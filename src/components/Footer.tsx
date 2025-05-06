@@ -6,8 +6,8 @@ import { FaWhatsapp, FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'reac
 
 const Footer = () => {
   return (
-    <section className='pt-[7rem] w-90% mx-auto '>
-      <div className='bg-[#F1F1F1] py-[4rem]'>
+    <section className='pt-[7rem] w-full mt-[4rem] bg-[#F1F1F1] '>
+      <div className=' mx-auto w-[90%]  '>
         <footer className='pb-[3rem] flex flex-col md:flex-row justify-between'>
             <div className='fex flex-col w-full md:w-[22rem] ' >
               <img src={sobisayImage} />
@@ -59,7 +59,7 @@ const Footer = () => {
         </footer>
     
         
-        <div className='flex w-[90%] md:items-start md:justify-start items-center justify-center border-t-1 text-[#9B9B9B] mx-auto py-[2rem]'>
+        <div className='flex w-[100%] md:items-start md:justify-start items-center justify-center border-t-1 text-[#9B9B9B] mx-auto py-[2rem]'>
         
         <span>
           <img src={copyRight} />
