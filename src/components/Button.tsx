@@ -19,8 +19,6 @@ type ButtonProps = HeaderProps & NavigationPropsLink;
 const Buttons:React.FC<ButtonProps> = ({contents, onNavClick, closeMenu}) => {
   
 
-
-
 const buttonMotionValues  = contents.map(()=>
 (
     {

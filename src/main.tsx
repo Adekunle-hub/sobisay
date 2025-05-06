@@ -41,7 +41,7 @@ function Main(){
     <StrictMode>
     
     <Header onNavClick={scrollToSection} />
-    <section ref={heroRef}><Hero /></section>
+    <section ref={heroRef}> <Hero /> </section>
     <section > <ImagesDisplay/> </section>
     <section ref={brandsRef}> <Brands /> </section> 
     <section ref={servicesRef}> <Services /> </section>

@@ -78,7 +78,7 @@ const Contact = () => {
 
   return (
     <fieldset className='md:pt-[7rem] pt-[3rem]'>
-      <section className='w-[90%] flex p-[3rem] rounded-3xl md:pt-[6rem] flex-col md:flex-row mx-auto md:gap-[6rem] bg-[#024866]'>
+      <section className='w-[90%] flex p-[3rem] rounded-3xl md:pt-[6rem] flex-col md:flex-row mx-auto md:gap-[2rem] bg-[#024866]'>
         <div className=' md:pr-[4rem]'>
           <p className='md:text-xl text-base pb-[10px] md:pb-[1rem] text-white'>Have a project in mind?</p>
           <h2 className='md:text-4xl text-2xl text-white pb-[10px]'>Reach Out</h2>
