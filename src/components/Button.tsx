@@ -6,6 +6,7 @@ import {motion, useMotionValue} from "framer-motion"
 
 type HeaderProps = {
   onNavClick:(section:string) => void
+  closeMenu?:()=> void
 }
 
 
@@ -15,7 +16,7 @@ type NavigationPropsLink ={
 
 type ButtonProps = HeaderProps & NavigationPropsLink;
 
-const Buttons:React.FC<ButtonProps> = ({contents, onNavClick}) => {
+const Buttons:React.FC<ButtonProps> = ({contents, onNavClick, closeMenu}) => {
   
 
 
@@ -29,11 +30,19 @@ const buttonMotionValues  = contents.map(()=>
   )
 );
 
+const isMobile =() =>{
+  return window.innerWidth <= 768 || 'ontouchstart' in window
+
+}
+
 
   let sensitivity:number = 0.4
   let maxMovement:number = 40
 
   const handleMove = (clientX: number, clientY: number, index: number, element: HTMLElement) =>{
+
+    if (isMobile()) return
+
     const buttonDimension = element.getBoundingClientRect()
     let centerX = (buttonDimension.left + buttonDimension.right) / 2;
     let centerY = (buttonDimension.top + buttonDimension.bottom) / 2;
@@ -55,6 +64,7 @@ const buttonMotionValues  = contents.map(()=>
     buttonMotionValues[index].y.set(0)
   }
  const handleTouchMove = (e:React.TouchEvent<HTMLLIElement>, index:number) => {
+  if(isMobile()) return;
   const touch = e.touches[0]
   handleMove(touch.clientX, touch.clientY, index, e.currentTarget)
  }
@@ -62,7 +72,15 @@ const buttonMotionValues  = contents.map(()=>
  const handleTouchEnd = (index:number)=>{
   buttonMotionValues[index].x.set(0)
   buttonMotionValues[index].y.set(0)
-  
+   
+ }
+
+ const handleClick =(content:string) => {
+  onNavClick(content)
+  if(closeMenu){
+    closeMenu()
+  }
+
  }
   return (
     <motion.button
@@ -75,15 +93,16 @@ const buttonMotionValues  = contents.map(()=>
           border-[rgba(61,61,61,0.3)]  '
            >
            <motion.li key={index}
-             style={{
+             style={!isMobile()?{
+
               x : buttonMotionValues[index].x,
               y : buttonMotionValues[index].y
-             }}
+             }:{}}
              onTouchMove={(e)=>{handleTouchMove(e, index)}}
              onTouchEnd={()=>{handleTouchEnd(index)}}
              onMouseMove ={(e)=> handleMouseMove(e, index)}
              onMouseLeave ={()=>handleMouseLeave(index)}
-             onClick={()=>{onNavClick(content)}} 
+             onClick={()=>{handleClick(content)}} 
              className={content === "Home" ? "md:hidden block": ""}
              >
             {content}

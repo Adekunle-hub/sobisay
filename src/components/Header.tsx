@@ -61,7 +61,7 @@ const Header = ({onNavClick}:HeaderProps) => {
           ?  (menuOpen ? 'top-0 bg-white ' : 'top-[-400px]' )
           :""
         }`} >
-          <Buttons contents={navBarContents} onNavClick={onNavClick}/>
+          <Buttons contents={navBarContents} onNavClick={onNavClick} closeMenu={()=>{setMenuOpen(false)}}/>
           <button className='bg-blue-500 text-white rounded-3xl px-[3rem] md:px-[1rem] mt-6 py-[0.5rem] mb-[1rem] md:mt-[0] whitespace-nowrap md:ml-[2rem]'> 
             Contact Us
           </button>
