@@ -15,6 +15,7 @@ const Contact = () => {
   const [formErrors, setFormErrors] = useState<FormErrors>({})
   const [isSubmit, setIsSubmit] = useState(false)
   const [isFormValid, setIsFormValid] = useState(false)
+  const [enableButton, setEnableButton] = useState(false)
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneNumberRegex = /^\+?(\d{1,3})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
@@ -28,6 +29,7 @@ const Contact = () => {
     e.preventDefault()
     setFormErrors(validate(formValue))
     setIsSubmit(true)
+    
 
   }
 
@@ -43,6 +45,7 @@ const Contact = () => {
       phoneNumberRegex.test(phone);
 
       setIsFormValid(isValid)
+      setEnableButton(isValid)
 
   },[formValue])
 
@@ -77,8 +80,8 @@ const Contact = () => {
 
 
   return (
-    <fieldset className='md:pt-[7rem] pt-[3rem]'>
-      <section className='w-[90%] flex p-[3rem] rounded-3xl md:pt-[6rem] flex-col md:flex-row mx-auto md:gap-[2rem] bg-[#024866]'>
+    <fieldset className='md:pt-[7rem] max-w-[90%] mx-auto pt-[3rem]'>
+      <section className=' flex rounded-3xl p-[3rem] flex-col md:flex-row mx-auto md:gap-[2rem] bg-[#024866]'>
         <div className=' md:pr-[4rem]'>
           <p className='md:text-xl text-base pb-[10px] md:pb-[1rem] text-white'>Have a project in mind?</p>
           <h2 className='md:text-4xl text-2xl text-white pb-[10px]'>Reach Out</h2>
@@ -98,7 +101,7 @@ const Contact = () => {
               onChange={handleChange}
               className='bg-white rounded-lg px-3 max-w-[100%] md:w-[32rem] py-4' 
             />
-            <p className='text-white text-sm'>{formErrors.fullname} </p>
+            <p className='text-red-800 font-extrabold text-sm'>{formErrors.fullname} </p>
           </div>
           
            
@@ -112,7 +115,7 @@ const Contact = () => {
               onChange={handleChange}
               value={formValue.email}
               className='bg-white rounded-lg px-3 max-w-[100%] md:w-[32rem] py-4' />
-              <p className='text-white text-sm'>{formErrors.email} </p>
+              <p className='text-red-800 font-extrabold text-sm'>{formErrors.email} </p>
             </div>
             
             
@@ -126,7 +129,7 @@ const Contact = () => {
                 onChange={handleChange}
                 value={formValue.phone}
                 className='bg-white rounded-lg px-3 max-w-[100%] md:w-[32rem] py-4'  />
-                <p className='text-white text-sm'>{formErrors.phone} </p>
+                <p className='text-red-800 font-extrabold text-sm'>{formErrors.phone} </p>
             </div>
             
            
@@ -145,12 +148,15 @@ const Contact = () => {
            
             
             <button 
-             className= {`flex items-center self-center rounded-[4rem]
+            disabled={!isFormValid}
+             className= {`flex items-center self-center rounded-[4rem] bg-blue-800
               ${isFormValid 
-                ? "bg-red-500"
-                : ""
+                ? " opacity-100 cursor-pointer"
+                : "opacity-40"
               }
-              text-white py-[5px] md:self-end px-[1rem] bg-red-300 cursor-pointer  opacity-70`} type="submit">Contact Us<img src={arrowImage} /></button>
+              text-white py-[5px] md:self-end px-[1rem]`}
+              
+              type="submit">Contact Us<img src={arrowImage} /></button>
           </form>
         </div>
     </section>
