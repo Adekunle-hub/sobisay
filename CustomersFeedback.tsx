@@ -18,7 +18,7 @@ type Feedback = {
   customer:{
     name:"Mutiullah Abolarin",
     post: "HEAD OF STAFF AL-WADUUD INSTITUTE",
-    organizationImage: "/hamburger.png"
+    organizationImage: "/waduud.jpg"
   }
 
 },
@@ -28,7 +28,7 @@ type Feedback = {
   customer:{
     name:"Huzzein Faruk",
     post: "CEO DEEN REMINDER CHANNEL",
-    organizationImage: "/hamburger.png"
+    organizationImage: "/Deen.jpg"
   }
 
 },
@@ -38,7 +38,7 @@ type Feedback = {
   customer:{
     name:"Samuel Omoniyi",
     post: "CO-FOUNDER JUBILINGO AGRO",
-    organizationImage: "/hamburger.png"
+    organizationImage: "/jublinguo.jpg"
   }
 
 },
@@ -48,7 +48,7 @@ type Feedback = {
   customer:{
     name:"Muhammad Imran",
     post: "AFFILIATE MARKETER ",
-    organizationImage: "/hamburger.png"
+    organizationImage: "/profile-svgrepo-com.svg"
   }
 
 },
@@ -58,7 +58,7 @@ type Feedback = {
   customer:{
     name:"Bala Jibril",
     post: "CEO E3 DATA NATION",
-    organizationImage: "/hamburger.png"
+    organizationImage: "/e3.jpg"
   }
 
 }

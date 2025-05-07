@@ -6,48 +6,48 @@ const BrandImages =[
   },
   {
     id:2,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/Deen.jpg",
+    text:"The Deens Channel"
   },
   {
     id:3,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/e3.jpg",
+    text:"E3 Data Nation"
   },
   {
     id:4,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/ibm.jpg",
+    text:"IBM Plumbing Mart"
   },
   {
     id:5,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/upmentorship.jpg",
+    text:"Upmentorship"
   },
   {
     id:6,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/waduud.jpg",
+    text:"Al-Waduud Institute"
   },
   {
     id:7,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/furqan.jpg",
+    text:"The Furqa'n Channel"
   },
   {
     id:8,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/cheapload.jpg",
+    text:"Cheapload"
   },
   {
     id:9,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/gns.jpg",
+    text:"Great Nigerian Students"
   },
   {
     id:10,
-    img:"/jublinguo.jpg",
-    text:"Jublingo agro"
+    img:"/jundy.jpg",
+    text:"Jundy Services"
   },
 ]
 

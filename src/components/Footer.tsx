@@ -6,7 +6,7 @@ import { FaWhatsapp, FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from 'reac
 
 const Footer = () => {
   return (
-    <section className='pt-[7rem] w-full mt-[4rem] bg-[#F1F1F1] '>
+    <section className='pt-[7rem] w-full mt-[1rem] lg:mt-[4rem] bg-[#F1F1F1] '>
       <div className=' mx-auto w-[90%]  '>
         <footer className='pb-[3rem] flex flex-col md:flex-row justify-between'>
             <div className='fex flex-col w-full md:w-[22rem] ' >
@@ -51,7 +51,7 @@ const Footer = () => {
                     id='email'
                     name='email'
                     placeholder='Email address'  className=' text-xs md:text-base' />
-                    <button className='bg-blue-700 py-1 text-white text-xs px-3 md:scale-[0.8] rounded-2xl'>Submit</button>
+                    <button className='bg-[#024866] py-1 text-white text-xs px-3 md:scale-[0.8] rounded-2xl'>Submit</button>
               </div>
                
               </div>

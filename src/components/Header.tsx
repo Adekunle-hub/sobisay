@@ -49,7 +49,7 @@ const Header = ({onNavClick}:HeaderProps) => {
  }
 
   return (
-    <nav className="pt-[1.5rem] z-20 md:static fixed top-0 left-0 w-full bg-[#F1F1F1] pb-[1.5rem]">
+    <nav className="pt-[0.6rem] md:pt-[1.5rem] z-20 md:static fixed top-0 left-0 w-full bg-[#F1F1F1] pb-[0.5rem] md:pb-[1.5rem]">
       <section 
        className='md:flex w-[90%] mx-auto relative items-center justify-between '>
         <div >
@@ -62,7 +62,7 @@ const Header = ({onNavClick}:HeaderProps) => {
           :""
         }`} >
           <Buttons contents={navBarContents} onNavClick={onNavClick} closeMenu={()=>{setMenuOpen(false)}}/>
-          <button className='bg-blue-500 text-white rounded-3xl px-[3rem] md:px-[1rem] mt-6 py-[0.5rem] mb-[1rem] md:mt-[0] whitespace-nowrap md:ml-[2rem]'> 
+          <button className='bg-[#024866] text-white rounded-3xl px-[3rem] md:px-[1rem] mt-6 py-[0.5rem] mb-[1rem] md:mt-[0] whitespace-nowrap md:ml-[2rem]'> 
             Contact Us
           </button>
         </div>

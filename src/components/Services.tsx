@@ -6,7 +6,7 @@ const Services = () => {
       <section className='flex flex-col items-center justify-center'>
         <div className='text-center py-[1rem]'>
           <h1 className='md:text-4xl text-3xl text-[#787878] pb-[1rem] font-semibold'>Explore Services</h1>
-          <h3 className='md:text-3xl text-2xl font-semibold text-[#3b82f6]'> We Offer</h3>
+          <h3 className='md:text-3xl text-2xl font-semibold text-[#024866]'> We Offer</h3>
         </div>
       </section>
         <section className='flex flex-col md:flex-row py-[2rem] gap-[1rem]'>

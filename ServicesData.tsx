@@ -10,17 +10,17 @@ type Service = {
 
  const servicesData :Service[] = [
   {
-    image: "/hamburger.png",
+    image: "/computer.svg",
     content:"Website Development",
     contentAbout:"We specialize in crafting exceptional websites that not only meet but exceed client’s business goal."
   },
   {
-    image: "/hamburger.png",
+    image: "video.svg",
     content:"Video Creatives",
     contentAbout:"We bring stories to life through captivating video animations that engage, inform and inspire."
   },
   {
-    image: "/hamburger.png",
+    image: "/ui.svg",
     content:"Website Development",
     contentAbout:"We specialize in crafting exceptional websites that not only meet but exceed client’s business goal."
   },
