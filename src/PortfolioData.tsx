@@ -11,6 +11,7 @@ type VideoCreation ={
   video:string,
   channelName:string,
   about:string
+  picture:string
 }
 
 
@@ -41,31 +42,36 @@ export const webDevelopment: Web[] = [
 export const videoCreatives: VideoCreation[] = [
   {
   id:1,
-  video:"/mujeeb.jpg",
+  video:"vid-1.mp4",
+  picture:"/e3 placeholder.png",
   channelName: "E3 data nation",
   about:" Check out our advertisement video for a telecommunication website: 'E3 data nation.' The video explains in detail, 'under 60 seconds,' all you need to know about the website. Simple, short, and sweet! It's a must watch! "
 },
 {
-  id:1,
-  video:"/mujeeb.jpg",
+  id:2,
+  video:"/vid-2.mp4",
+  picture:"/furqan wallpaper.png",
   channelName: "The Furqa’n Channel",
   about:" Only with the use of amazing sound effects, background sound (nasheed), and popping animations, we were able to create a video just perfect to advertise an Islamic WhatsApp channel: 'Al-Furqān Channel' All information is packed under a 35-second video!"
 },
 {
-  id:1,
-  video:"/mujeeb.jpg",
+  id:3,
+  picture:"/exempify placeholder.png",
+  video:"vid-2.mp4",
   channelName: "Bexempify",
   about:" Check out our advertisement video for a telecommunication website: 'Bexempify.' The video explains in detail, 'under 50 seconds,' all you need to know about the website. Simple, short, and sweet! It's a must watch! "
 },
 {
-  id:1,
-  video:"/mujeeb.jpg",
+  id:4,
+  picture:"/wadud placeholder.png",
+  video:"waduud.mp4",
   channelName: "Al Waduud",
   about:" Check out our advertisement video for a telecommunication website: 'Bexempify.'' The video explains in detail, 'under 50 seconds,' all you need to know about the website. Simple, short, and sweet! It's a must watch! "
 },
 {
-  id:1,
-  video:"/mujeeb.jpg",
+  id:5,
+  picture:"/ibm placeholder.png",
+  video:"bex.mp4",
   channelName: "IBM PLUMBING MART",
   about:" Check out our advertisement video for a telecommunication website: 'Bexempify.' The video explains in detail, 'under 50 seconds,' all you need to know about the website. Simple, short, and sweet! It's a must watch! "
 }

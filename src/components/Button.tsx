@@ -84,7 +84,7 @@ const isMobile =() =>{
     <motion.button
     
      className='md:flex gap-[1.5rem]  w-full items-center justify-center text-left '>
-        {contents.map((content, index) =>{
+        {contents.map((content, index) => {
           return ( 
            <ul
           className='cursor-pointer pb-[0.5rem] md:pb-[0] font-semibold mb-[1rem] w-full  md:border-none border-b-1
@@ -100,10 +100,21 @@ const isMobile =() =>{
              onTouchEnd={()=>{handleTouchEnd(index)}}
              onMouseMove ={(e)=> handleMouseMove(e, index)}
              onMouseLeave ={()=>handleMouseLeave(index)}
-             onClick={()=>{handleClick(content)}} 
-             className={content === "Home" ? "md:hidden block": ""}
+             className={`
+              ${content === "Home" ? "md:hidden block ": ""}
+              ${content === "Contact Us" ? "bg-[#024866] text-white rounded-3xl px-[3rem] md:px-[1rem]  py-[0.5rem]  md:mt-[0] whitespace-nowrap ": ""}
+              
+              `}
+           
              >
-            {content}
+              <a href={`#${content}`}
+              onClick={()=>{handleClick(content)}} 
+             
+
+              >
+              {content}
+              </a>
+            
             </motion.li>
            </ul> 
             

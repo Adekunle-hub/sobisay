@@ -10,3 +10,17 @@
     transform: translateX(-50%);
   }
 }
+
+
+/* .slideLeft{
+  animation: slideInLeft 10s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  0%{
+     transform: translateX(-100%),
+  }100% {
+     transform: translateX(0%)
+  }
+  
+} */

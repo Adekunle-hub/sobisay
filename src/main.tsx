@@ -1,4 +1,6 @@
-import { StrictMode, useRef, RefObject } from 'react'
+
+
+import { StrictMode} from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import Header from './components/Header'
@@ -13,26 +15,14 @@ import Clients from './components/Clients'
 
 
 function Main(){
-  const heroRef = useRef<HTMLElement>(null);
-  const brandsRef = useRef<HTMLElement>(null);
-  const servicesRef = useRef<HTMLElement>(null);
-  const portfolioRef = useRef<HTMLElement>(null);
-  const clientRef = useRef<HTMLElement>(null);
+
 
   const scrollToSection = (section:string)=>{
-    const sectionMap:{[key:string]: RefObject<HTMLElement | null>} = {
-      Hero: heroRef,
-      Brand: brandsRef,
-      Services: servicesRef,
-      Portfolio: portfolioRef,
-      Clients: clientRef,
-    }
-   
-
-    const ref = sectionMap[section];
-    if(ref && ref.current){
-      ref.current.scrollIntoView({behavior:"smooth"})
-    }
+ 
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
 
   }
   
@@ -41,12 +31,12 @@ function Main(){
     <StrictMode>
     
     <Header onNavClick={scrollToSection} />
-    <section ref={heroRef}> <Hero /> </section>
+    <section > <Hero /> </section>
     <section > <ImagesDisplay/> </section>
-    <section ref={brandsRef}> <Brands /> </section> 
-    <section ref={servicesRef}> <Services /> </section>
-    <section ref={portfolioRef}> <Portfolio /> </section>
-    <section ref={clientRef}>  <Clients/> </section>
+    <section> <Brands /> </section> 
+    <section> <Services /> </section>
+    <section> <Portfolio /> </section>
+    <section>  <Clients/> </section>
     <section > <Contact /> </section>
     
     <Footer />
@@ -55,18 +45,5 @@ function Main(){
 }
 createRoot(document.getElementById('root')!).render(<Main />)
 
-// createRoot(document.getElementById('root')!).render(
-  
-//   <StrictMode>
-    
-//     <Header />
-//     <Hero />
-//     <ImagesDisplay />
-//     <Brands />
-//     <Services />
-//     <Portfolio />
-//     <Feedback/>
-//     <Contact />
-//     <Footer />
-//   </StrictMode>,
-// )
+
+

@@ -3,15 +3,18 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import BrandImages from "../../BrandsData"
 import "../../slider.css"
+import MaxContainer from './MaxContainer';
 
 const Brands = () => {
  
 
   return (
     
-      <section className=' '>
+        <section id='Brand' className=' '>
         <div className='flex bg-[#024866] py-[3rem] items-center justify-center flex-col gap-[2.5rem]'>
+        
           <h1 className=' text-3xl text-white font-semibold'>Brands We've Impacted</h1>
+          <MaxContainer>
           <div className='w-full  overflow-hidden '>
             <div className='flex  marquee w-max whitespace-nowrap'>
               {[...BrandImages, ...BrandImages].map((brand, index)=>(
@@ -24,11 +27,14 @@ const Brands = () => {
               
               ))}
             </div>
+            
           </div>
-          
+          </MaxContainer>
         </div>
        
       </section>
+    
+      
     
   )
 }
