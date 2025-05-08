@@ -1,5 +1,5 @@
 .marquee {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 15s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -7,21 +7,41 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-100% / 4));
+    
   }
 
 }
 
 
-/* .slideLeft{
-  animation: slideInLeft 10s ease-out forwards;
+.slideLeft{
+  animation: slideInLeft 1.5s ease-out forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
 }
 
 @keyframes slideInLeft {
-  0%{
-     transform: translateX(-100%),
-  }100% {
-     transform: translateX(0%)
-  }
+
+    0% {
+      clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%); /* Left edge only */
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Full image */
+    }
   
-} */
+  
+}
+
+.riseUp{
+  animation: riseReveal 1s ease-out forwards ;
+}
+
+@keyframes riseReveal {
+  0% {
+    clip-path: inset(100% 0 0 0); 
+  }
+  100% {
+    clip-path: inset(0 0 0 0); 
+  }
+}

@@ -15,8 +15,8 @@ const Brands = () => {
           </h1>
 
           <div className="w-[100%] overflow-hidden ">
-            <div className="flex  marquee w-max whitespace-nowrap">
-              {[...BrandImages, ...BrandImages].map((brand, index) => (
+            <div className="flex marquee w-max will-change-transform whitespace-nowrap">
+              {[...BrandImages, ...BrandImages, ...BrandImages, ...BrandImages].map((brand, index) => (
                 <div key={index} className="px-4 flex flex-col items-center">
                   <img
                     src={brand.img}
@@ -27,6 +27,7 @@ const Brands = () => {
                   </p>
                 </div>
               ))}
+              
             </div>
           </div>
         </div>

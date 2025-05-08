@@ -12,7 +12,7 @@ const Hero = () => {
         className="flex pt-[3rem] flex-col md:flex-row mx-auto gap-[0.5rem] md:gap-[2rem] w-[90%] justify-between items-center "
       >
        
-          <div className="max-w-[66rem] gap-[1rem] pt-[3rem]  ">
+          <div className="max-w-[66rem] gap-[1rem] pt-[3rem] riseUp ">
             <h1 className="text-[1.8rem] md:text-5xl text-center leading-8 md:text-left md:max-w-[40rem] font-medium md:font-bold py-3 md:leading-15">
               Grow Double,Tripple or even{" "}
               <span className="text-[#024866]">
