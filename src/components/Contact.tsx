@@ -78,7 +78,6 @@ const Contact = () => {
               throw new Error("Message not sent");
             }
           },
-          error: (err) => err.message
         }
       );
     }finally {
