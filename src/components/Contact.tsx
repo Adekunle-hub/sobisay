@@ -63,11 +63,14 @@ const Contact = () => {
         then(async(res) => 
         {
           if(!res.ok){
-            setFormValues(initialValues)
+            const errorData = await res.json().catch(()=>({}))
+            throw new Error(errorData.message || "Message not sent")
           }
           return res.json()
         }
-          ),
+          ).catch(err =>{
+            throw new Error (err || "Message not sent")
+          }),
         {
           loading: "Sending your message...",
           success: (res) => {
@@ -75,9 +78,10 @@ const Contact = () => {
               setFormValues(initialValues);
               return "Message sent successfully";
             } else {
-              throw new Error("Message not sent");
+              throw new Error(res.message);
             }
           },
+          error: (err) => err.message
         }
       );
     }finally {
