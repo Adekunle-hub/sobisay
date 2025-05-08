@@ -34,7 +34,7 @@
 }
 
 .riseUp{
-  animation: riseReveal 1s ease-out forwards ;
+  animation: riseReveal 0.5s ease-out forwards ;
 }
 
 @keyframes riseReveal {
