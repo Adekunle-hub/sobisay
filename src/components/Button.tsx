@@ -106,12 +106,7 @@ const isMobile =() =>{
              className={`
               ${content === "Home" ? "md:hidden block ": ""}
               ${content === "Contact Us" ? "bg-[#024866] text-white rounded-3xl w-1/2 text-center md:px-[1rem]  py-[0.5rem]  md:mt-[0] whitespace-nowrap ": ""} `}
-              onClick ={(e)=>{
-                  if(content === "Home"){
-                    e.preventDefault()
-                    window.location.reload()
-                  }
-              }}
+              
              >
               <a href={`#${content}`}
               onClick={()=>{handleClick(content)}} 

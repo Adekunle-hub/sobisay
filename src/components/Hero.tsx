@@ -6,12 +6,11 @@ import MaxContainer from "./MaxContainer";
 const Hero = () => {
   return (
     <>
-     <MaxContainer>
-      <section
-        id="Hero"
-        className="flex pt-[3rem] flex-col md:flex-row mx-auto gap-[0.5rem] md:gap-[2rem] w-[90%] justify-between items-center "
-      >
-       
+      <MaxContainer>
+        <section
+          id="Home"
+          className="flex pt-[3rem] flex-col md:flex-row mx-auto gap-[0.5rem] md:gap-[2rem] w-[90%] justify-between items-center "
+        >
           <div className="max-w-[66rem] gap-[1rem] pt-[3rem] riseUp ">
             <h1 className="text-[1.7rem] md:text-5xl text-center leading-8 md:text-left md:max-w-[40rem] font-medium md:font-bold md:py-3  py-1 md:leading-15">
               Grow Double,Tripple or even{" "}
@@ -49,8 +48,7 @@ const Hero = () => {
               className="w-full h-auto object-contain  max-h-96 "
             />
           </div>
-        
-      </section>
+        </section>
       </MaxContainer>
     </>
   );
