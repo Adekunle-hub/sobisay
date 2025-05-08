@@ -19,6 +19,8 @@ const Contact = () => {
   const [enableButton, setEnableButton] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  const key: string = import.meta.env.VITE_WEB3FORMS_KEY;
+
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const phoneNumberRegex =
     /^\+?(\d{1,3})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
@@ -44,12 +46,12 @@ const Contact = () => {
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+
     setFormErrors(validate(formValue));
     setIsSubmit(true);
     setIsLoading(true);
     setFormValues(initialValues);
-    formData.append("access_key", "20104d1f-a9ad-47d4-b59c-a3b1e7f7b689");
+
     try {
       await toast.promise(
         fetch("https://api.web3forms.com/submit", {
@@ -58,18 +60,21 @@ const Contact = () => {
             "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: JSON.stringify(Object.fromEntries(formData)),
-        }).
-        then(async(res) => 
-        {
-          if(!res.ok){
-            const errorData = await res.json().catch(()=>({}))
-            throw new Error(errorData.message || "Message not sent")
-          }
-          return res.json()
-        }
-          ).catch(err =>{
-            throw new Error (err || "Message not sent")
+          body: JSON.stringify({
+            access_key: key,
+            name: "Ishola Mujeeb",
+            email: "softwork4gold@gmail.com",
+          }),
+        })
+          .then(async (res) => {
+            if (!res.ok) {
+              const errorData = await res.json().catch(() => ({}));
+              throw new Error(errorData.message || "Message not sent");
+            }
+            return res.json();
+          })
+          .catch((err) => {
+            throw new Error(err || "Message not sent");
           }),
         {
           loading: "Sending your message...",
@@ -81,10 +86,10 @@ const Contact = () => {
               throw new Error(res.message);
             }
           },
-          error: (err) => err.message
+          error: (err) => err.message,
         }
       );
-    }finally {
+    } finally {
       setIsLoading(false);
     }
   };
@@ -120,13 +125,10 @@ const Contact = () => {
   }, [formErrors]);
 
   return (
-    <div className="bg-[#024866] mt-[3rem]">
+    <div className="bg-[#024866] w-[90%] p-[3rem]  rounded-3xl mx-auto mt-[3rem]">
       <MaxContainer>
-        <fieldset
-          id="Contact Us"
-          className="md:pt-[7rem]  w-[90%] mx-auto  pt-[3rem]"
-        >
-          <section className=" flex rounded-3xl   p-[3rem] flex-col md:flex-row mx-auto md:gap-[4rem] ">
+        <fieldset id="Contact Us" className="md:pt-[7rem]  w-[90%] mx-auto ">
+          <section className=" flex flex-col md:flex-row mx-auto md:gap-[4rem] gap-[1rem] ">
             <div className="lg:w-[30%] w-[100%]  md:pr-[4rem]">
               <p className="md:text-xl text-base pb-[10px] md:pb-[1rem] text-white">
                 Have a project in mind?
@@ -140,7 +142,7 @@ const Contact = () => {
               <Toaster position="top-right" />
               <form
                 onSubmit={onSubmit}
-                className="flex relative flex-col gap-6"
+                className="flex relative flex-col md:gap-6 gap-2"
               >
                 <div className="flex flex-col  gap-2">
                   <label
