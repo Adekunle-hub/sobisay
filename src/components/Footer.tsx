@@ -56,7 +56,7 @@ const Footer = () => {
                   </span>
                 </h1>
                 <p className="text-xs md:text-sm">About Us</p>
-                <p className="text-xs md:text-sm">Contact Us</p>
+                <a href="#Contact Us" className="text-xs md:text-sm">Contact Us</a>
               </div>
             </article>
 

@@ -58,7 +58,7 @@ const Header = ({onNavClick}:HeaderProps) => {
     
         <div className={`md:flex pl-[2rem] text-[rgb(61,61,61)] text-opacity-80 md:static items-center justify-center w-screen pt-[5rem] md:pt-[0] md:w-auto  fixed right-0 z-4 transition-all duration-200 ease-in 
         ${isMobile 
-          ?  (menuOpen ? 'top-0 bg-white ' : 'top-[-400px]' )
+          ?  (menuOpen ? 'top-[0] bg-white ' : 'top-[-700px]' )
           :""
         }`} >
           <Buttons contents={navBarContents} onNavClick={onNavClick} closeMenu={()=>{setMenuOpen(false)}}/>

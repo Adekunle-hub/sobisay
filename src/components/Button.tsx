@@ -87,8 +87,11 @@ const isMobile =() =>{
         {contents.map((content, index) => {
           return ( 
            <ul
-          className='cursor-pointer pb-[0.5rem] md:pb-[0] font-semibold mb-[1rem] w-full  md:border-none border-b-1
-          border-[rgba(61,61,61,0.3)]  '
+          className={`cursor-pointer pb-[0.5rem] md:pb-[0] font-semibold mb-[1rem] w-full  md:border-none border-b-1
+          border-[rgba(61,61,61,0.3)]
+          ${content === "Contact Us" ?"!border-none" : ""} `
+            
+        }
            >
            <motion.li key={index}
              style={!isMobile()?{
@@ -102,13 +105,17 @@ const isMobile =() =>{
              onMouseLeave ={()=>handleMouseLeave(index)}
              className={`
               ${content === "Home" ? "md:hidden block ": ""}
-              ${content === "Contact Us" ? "bg-[#024866] text-white rounded-3xl px-[3rem] md:px-[1rem]  py-[0.5rem]  md:mt-[0] whitespace-nowrap ": ""}
-              
-              `}
-           
+              ${content === "Contact Us" ? "bg-[#024866] text-white rounded-3xl w-1/2 text-center md:px-[1rem]  py-[0.5rem]  md:mt-[0] whitespace-nowrap ": ""} `}
+              onClick ={(e)=>{
+                  if(content === "Home"){
+                    e.preventDefault()
+                    window.location.reload()
+                  }
+              }}
              >
               <a href={`#${content}`}
               onClick={()=>{handleClick(content)}} 
+              className='no-underline'
              
 
               >

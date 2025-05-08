@@ -13,7 +13,7 @@ const Hero = () => {
       >
        
           <div className="max-w-[66rem] gap-[1rem] pt-[3rem] riseUp ">
-            <h1 className="text-[1.8rem] md:text-5xl text-center leading-8 md:text-left md:max-w-[40rem] font-medium md:font-bold py-3 md:leading-15">
+            <h1 className="text-[1.7rem] md:text-5xl text-center leading-8 md:text-left md:max-w-[40rem] font-medium md:font-bold md:py-3  py-1 md:leading-15">
               Grow Double,Tripple or even{" "}
               <span className="text-[#024866]">
                 {" "}
@@ -21,7 +21,7 @@ const Hero = () => {
               </span>{" "}
               Online and Presence Fast
             </h1>
-            <p className="text-center md:text-left md:text-lg md:w-[80%] text-sm mb-[2rem]">
+            <p className="text-center md:text-left md:text-lg md:w-[80%] text-sm md:mb-[2rem] mb-[0.5rem]">
               We create videos that engage your audience and drive traffic, as
               well as websites that convert those visitors into paying
               customers.
