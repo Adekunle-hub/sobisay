@@ -114,7 +114,7 @@ const Buttons: React.FC<ButtonProps> = ({
               ${content === "Home" ? "md:hidden block " : ""}
               ${
                 content === "Contact Us"
-                  ? "bg-[#024866] text-white rounded-3xl w-1/2 text-center md:px-[1rem]  py-[0.5rem]  md:mt-[0] whitespace-nowrap "
+                  ? "bg-[#024866] text-white rounded-3xl w-1/2 sm:w-full text-center md:px-[1rem]  py-[0.5rem]  md:mt-[0] whitespace-nowrap "
                   : ""
               } `}
             >
