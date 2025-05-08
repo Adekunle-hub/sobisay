@@ -59,7 +59,18 @@ const Contact = () => {
             Accept: "application/json",
           },
           body: JSON.stringify(Object.fromEntries(formData)),
-        }).then((res) => res.json()),
+        }).
+        then(async(res) => 
+        {
+          if(!res.ok){
+            const errorData = await res.json().catch(()=>({}))
+            throw new Error(errorData.message || "Message not sent")
+          }
+          return res.json()
+        }
+          ).catch(err =>{
+            throw new Error (err || "Message not sent")
+          }),
         {
           loading: "Sending your message...",
           success: (res) => {
@@ -70,13 +81,10 @@ const Contact = () => {
               throw new Error(res.message);
             }
           },
-          error: (err) =>
-            err.message || "Failed to send message. Please try again.",
+          error: (err) => err.message
         }
       );
-    } catch (error) {
-      console.error(error);
-    } finally {
+    }finally {
       setIsLoading(false);
     }
   };
