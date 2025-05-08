@@ -1,12 +1,9 @@
-
-const MaxContainer = ({children}:any) => {
+const MaxContainer = ({ children }: any) => {
   return (
     <div className="max-w-[1900px] flex items-center mx-auto justify-center">
-      {
-        children
-      }
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default MaxContainer
+export default MaxContainer;
